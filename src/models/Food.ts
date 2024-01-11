@@ -1,9 +1,8 @@
-class Game {
+class Food {
   category: string
   description: string
   image: string
   infos: string[]
-  system: string
   title: string
   id: number
 
@@ -12,7 +11,6 @@ class Game {
     description: string,
     image: string,
     infos: string[],
-    system: string,
     title: string,
     id: number
   ) {
@@ -20,10 +18,9 @@ class Game {
     this.description = description
     this.image = image
     this.infos = infos
-    this.system = system
     this.title = title
     this.id = id
   }
 }
 
-export default Game
+export default Food

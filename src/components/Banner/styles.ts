@@ -15,6 +15,15 @@ export const Image = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    a {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 
   ${TagContainer} {

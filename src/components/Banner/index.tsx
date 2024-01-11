@@ -1,17 +1,17 @@
 import { Image, Title, Prices } from './styles'
-import BannerImg from '../../assets/images/banner-homem-aranha.png'
+import BannerImg from '../../assets/images/banner1.jpg'
 import Tag from '../Tag'
 import Button from '../Button'
 
 const Banner = () => (
   <Image style={{ backgroundImage: `url(${BannerImg})` }}>
     <div className="container">
-      <Tag size="big">Highlight of the day</Tag>
+      <Tag size="big">Offer of the day</Tag>
       <div>
-        <Title>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Title>
+        <Title>Rustic Combo</Title>
         <Prices>
-          From <span>R$ 250,00</span> <br />
-          for just R$ 99,90
+          From <span>R$ 35,00</span> <br />
+          for just R$ 29,90
         </Prices>
       </div>
       <Button
@@ -19,7 +19,7 @@ const Banner = () => (
         to="/product"
         title="Click here to take advantage of the offer"
       >
-        To enjoy
+        Reserve mine
       </Button>
     </div>
   </Image>

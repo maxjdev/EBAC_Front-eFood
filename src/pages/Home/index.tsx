@@ -1,82 +1,88 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
-import Game from '../../models/Game'
-import resident from '../../assets/images/resident.png'
-import diablo from '../../assets/images/diablo.png'
-import zelda from '../../assets/images/zelda.png'
-import starWars from '../../assets/images/star_wars.png'
+import Food from '../../models/Food'
+import burguer from '../../assets/images/burguer-card.jpeg'
+import drink from '../../assets/images/drink.jpg'
 
-const promotions: Game[] = [
+const promotions: Food[] = [
   {
     id: 1,
-    category: 'Action',
+    category: 'Burguer',
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
+      'Enjoy authenticity in every bite with our rustic burger, prepared with succulent meat and selected ingredients.',
+    title: 'Rustic Hunger',
+    infos: ['10%', 'R$ 35,00'],
+    image: burguer
   },
   {
     id: 2,
-    category: 'Action',
+    category: 'Burguer',
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
-    system: 'PS5',
-    infos: ['5%', 'R$ 290,00'],
-    image: starWars
+      'Enjoy authenticity in every bite with our rustic burger, prepared with succulent meat and selected ingredients.',
+    title: 'Rustic Hunger',
+    infos: ['10%', 'R$ 35,00'],
+    image: burguer
   },
   {
     id: 3,
-    category: 'Action',
+    category: 'Burguer',
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
+      'Enjoy authenticity in every bite with our rustic burger, prepared with succulent meat and selected ingredients.',
+    title: 'Rustic Hunger',
+    infos: ['10%', 'R$ 35,00'],
+    image: burguer
+  },
+  {
+    id: 4,
+    category: 'Burguer',
+    description:
+      'Enjoy authenticity in every bite with our rustic burger, prepared with succulent meat and selected ingredients.',
+    title: 'Rustic Hunger',
+    infos: ['10%', 'R$ 35,00'],
+    image: burguer
   }
 ]
 
-const shortly: Game[] = [
+const shortly: Food[] = [
   {
     id: 5,
-    category: 'RPG',
-    description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Diablo 4',
-    system: 'Windows',
-    infos: ['17/05'],
-    image: diablo
+    category: 'Drink',
+    description: 'Delicious natural juice.',
+    title: 'Organge juice',
+    infos: ['R$ 8,00'],
+    image: drink
   },
   {
     id: 6,
-    category: 'RPG',
-    description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Diablo 4',
-    system: 'Nintendo Switch',
-    infos: ['17/05'],
-    image: zelda
+    category: 'Drink',
+    description: 'Delicious natural juice.',
+    title: 'Organge juice',
+    infos: ['R$ 8,00'],
+    image: drink
   },
   {
     id: 7,
-    category: 'RPG',
-    description:
-      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
-    title: 'Diablo 4',
-    system: 'PS5',
-    infos: ['17/05'],
-    image: diablo
+    category: 'Drink',
+    description: 'Delicious natural juice.',
+    title: 'Organge juice',
+    infos: ['R$ 8,00'],
+    image: drink
+  },
+  {
+    id: 8,
+    category: 'Drink',
+    description: 'Delicious natural juice.',
+    title: 'Organge juice',
+    infos: ['R$ 8,00'],
+    image: drink
   }
 ]
 
 const Home = () => (
   <>
     <Banner />
-    <ProductsList games={promotions} title={'Promotions'} background={'gray'} />
-    <ProductsList games={shortly} title={'Shortly'} background={'black'} />
+    <ProductsList foods={promotions} title={'Burgers'} background={'gray'} />
+    <ProductsList foods={shortly} title={'Drinks'} background={'black'} />
   </>
 )
 

@@ -6,46 +6,51 @@ const Footer = () => (
   <Container>
     <div className="container">
       <FooterSection>
-        <SectionTitle>Categories</SectionTitle>
+        <SectionTitle>eBurguer</SectionTitle>
         <Links>
           <li>
-            <Link>RPG</Link>
-          </li>
-          <li>
-            <Link>Action</Link>
-          </li>
-          <li>
-            <Link>Adventure</Link>
-          </li>
-          <li>
-            <Link>Sports</Link>
-          </li>
-          <li>
-            <Link>Simulation</Link>
-          </li>
-          <li>
-            <Link>Strategy</Link>
-          </li>
-          <li>
-            <Link>FPS</Link>
+            <Link>
+              <img
+                src="https://img.icons8.com/external-lineal-color-zulfa-mahendra/48/external-burguer-food-delivery-lineal-color-zulfa-mahendra.png"
+                alt=""
+              />
+            </Link>
           </li>
         </Links>
       </FooterSection>
       <FooterSection>
-        <SectionTitle>Quick access</SectionTitle>
         <Links>
           <li>
-            <Link>News</Link>
+            <Link>
+              <img
+                src="https://img.icons8.com/color/48/facebook-new.png"
+                alt="Facebook"
+              />
+            </Link>
           </li>
           <li>
-            <Link>Promotions</Link>
+            <Link>
+              <img
+                src="https://img.icons8.com/color/48/instagram-new--v1.png"
+                alt="Facebook"
+              />
+            </Link>
           </li>
           <li>
-            <Link>Shortly</Link>
+            <Link>
+              <img
+                src="https://img.icons8.com/color/48/twitter--v1.png"
+                alt="Facebook"
+              />
+            </Link>
           </li>
         </Links>
       </FooterSection>
-      <p>{currentYear} - &copy; E-PLAY Todos os direitos reservados</p>
+      <p>
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.
+      </p>
     </div>
   </Container>
 )

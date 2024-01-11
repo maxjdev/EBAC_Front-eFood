@@ -1,23 +1,15 @@
 import Tag from '../Tag'
-import { Description, Card, TitleH3, Infos } from './styles'
+import { Description, Card, TitleH3, Infos, ButtonBuy } from './styles'
 
 type Props = {
   title: string
   category: string
-  system: string
   description: string
   infos: string[]
   image: string
 }
 
-const Product = ({
-  category,
-  description,
-  image,
-  infos,
-  system,
-  title
-}: Props) => (
+const Product = ({ category, description, image, infos, title }: Props) => (
   <Card>
     <img src={image} alt={title} />
     <Infos>
@@ -27,8 +19,8 @@ const Product = ({
     </Infos>
     <TitleH3>{title}</TitleH3>
     <Tag>{category}</Tag>
-    <Tag>{system}</Tag>
     <Description>{description}</Description>
+    <ButtonBuy>Make a wish</ButtonBuy>
   </Card>
 )
 

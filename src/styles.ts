@@ -20,7 +20,7 @@ export const GlobalCss = createGlobalStyle`
   body {
     background-color: ${Colors.black};
     color: ${Colors.white};
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .container {
