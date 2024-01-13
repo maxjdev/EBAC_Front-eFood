@@ -2,6 +2,15 @@ import { useState, useEffect } from 'react'
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 
+export type Cardapio = {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
+
 export type Food = {
   id: number
   titulo: string
@@ -10,18 +19,11 @@ export type Food = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: {
-    foto: string
-    preco: number
-    id: number
-    nome: string
-    descricao: string
-    porcao: string
-  }[]
+  cardapio: Cardapio[]
 }[]
 
 const Home = () => {
-  const [foods, setFoods] = useState<Food[]>([])
+  const [foods, setFoods] = useState<Cardapio[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')

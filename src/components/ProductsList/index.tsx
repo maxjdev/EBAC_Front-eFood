@@ -1,18 +1,15 @@
-import { Food } from '../../pages/Home'
+import { Cardapio, Food } from '../../pages/Home'
 import Product from '../Product'
 import { Container, List } from './styles'
 
 export type Props = {
   title: string
   background: 'gray' | 'black'
-  foods: Food[]
+  foods: Cardapio[]
 }
 
 const ProductsList = ({ background, title, foods }: Props) => {
   console.log('consolelog1' + foods)
-
-  const t = foods.map((food) => food)
-  console.log('consolelog2' + t)
 
   return (
     <>
@@ -23,9 +20,10 @@ const ProductsList = ({ background, title, foods }: Props) => {
             {foods.map((food) => (
               <Product
                 key={food.id}
-                category={food.tipo}
+                category={food.porcao}
                 description={food.descricao}
-                title={food.titulo}
+                title={food.nome}
+                image={food.foto}
               />
             ))}
           </List>

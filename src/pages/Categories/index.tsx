@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import ProductsList from '../../components/ProductsList'
-import { Food } from '../Home'
+import { Food, Cardapio } from '../Home'
 
 const Categories = () => {
-  const [foods, setFoods] = useState<Food[]>([])
+  const [foods, setFoods] = useState<Cardapio[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((data) => data.json())
-      .then((data) => setFoods(data))
+      .then((res) => setFoods(res[0].cardapio))
   }, [])
 
   return (
