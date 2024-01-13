@@ -25,15 +25,14 @@ const Home = () => {
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((data) => data.json())
-      .then((data) => setFoods(data))
+      .then((res) => res.json())
+      .then((res) => setFoods(res[0].cardapio))
   }, [])
 
   return (
     <>
       <Banner />
       <ProductsList foods={foods} title={'Burgers'} background={'gray'} />
-      <ProductsList foods={foods} title={'Drinks'} background={'black'} />
     </>
   )
 }
