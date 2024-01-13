@@ -9,11 +9,6 @@ export type Props = {
 }
 
 const ProductsList = ({ background, title, foods }: Props) => {
-  if (foods.length === 0) {
-    return null
-  }
-
-  // Pegar o cardápio do primeiro restaurante
   const italianCardapio = foods.filter((food) => food[0].cardapio)
 
   return (
