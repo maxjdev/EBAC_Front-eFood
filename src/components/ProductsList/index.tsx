@@ -9,7 +9,10 @@ export type Props = {
 }
 
 const ProductsList = ({ background, title, foods }: Props) => {
-  console.log(foods)
+  /* console.log(foods) */
+
+  const t = foods.map((food) => food)
+  console.log(t)
 
   return (
     <>
@@ -21,7 +24,7 @@ const ProductsList = ({ background, title, foods }: Props) => {
               <Product
                 key={''}
                 category={''}
-                description={''}
+                description={'food[].descricao'}
                 image={''}
                 title={''}
               />
