@@ -13,22 +13,13 @@ import exit from '../../assets/images/fechar.png'
 
 type Props = {
   title: string
-  category: string
+  category: number | string
   description: string
-  infos: string[]
   image: string
 }
 
-const Product = ({ category, description, image, infos, title }: Props) => {
+const Product = ({ category, description, image, title }: Props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-
-  /*   function openModal() {
-    setModalIsOpen(true)
-  }
-
-  function closeModal() {
-    setModalIsOpen(false)
-  } */
 
   const toggleModal = () => setModalIsOpen(!modalIsOpen)
 
@@ -36,11 +27,11 @@ const Product = ({ category, description, image, infos, title }: Props) => {
     <>
       <Card>
         <img src={image} alt={title} />
-        <Infos>
+        {/*         <Infos>
           {infos.map((info) => (
             <Tag key={info}>{info}</Tag>
           ))}
-        </Infos>
+        </Infos> */}
         <TitleH3>{title}</TitleH3>
         <Tag>{category}</Tag>
         <Description>{description}</Description>
