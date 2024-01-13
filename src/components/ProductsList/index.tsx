@@ -9,7 +9,7 @@ export type Props = {
 }
 
 const ProductsList = ({ background, title, foods }: Props) => {
-  const italianCardapio = foods.filter((food) => food[0].cardapio)
+  /* const italianCardapio = foods.filter((food) => food[0].cardapio) */
 
   return (
     <>
@@ -17,9 +17,9 @@ const ProductsList = ({ background, title, foods }: Props) => {
         <div className="container">
           <h2>{title}</h2>
           <List>
-            {italianCardapio.map((food) => (
+            {foods.map((food) => (
               <Product
-                key={food[0].id}
+                key={food[0].cardapio[0].id}
                 category={food[0].cardapio[0].porcao}
                 description={food[0].cardapio[0].descricao}
                 image={food[0].cardapio[0].foto}
