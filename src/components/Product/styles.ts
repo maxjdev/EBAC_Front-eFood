@@ -1,30 +1,31 @@
 import styled from 'styled-components'
 import { Colors } from '../../styles'
-import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
-  background-color: ${Colors.gray};
-  padding: 14px;
-  border-radius: 8px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.3s ease-in-out;
+  background-color: ${Colors.gray};
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
 
   &:hover {
     transform: scale(1.05);
   }
 
   img {
-    max-width: 222px;
-    max-height: 300px;
+    width: 100%;
+    height: 200px;
     border-radius: 8px;
   }
 
-  ${TagContainer} {
-    margin-right: 8px;
+  div {
+    text-align: center;
+    /* display: block; */
+    /* flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
   }
 `
 
@@ -34,12 +35,12 @@ export const TitleH3 = styled.h3`
   display: block;
   margin-top: 16px;
   margin-bottom: 8px;
+  text-align: center;
 `
 
 export const Description = styled.p`
   font-size: 14px;
   line-height: 22px;
-  display: block;
   margin-top: 16px;
   text-align: center;
 `

@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { Props } from './index'
 import { Colors } from '../../styles'
 import { ButtonBuy, Card } from '../Product/styles'
+import Product from '../Product'
 
-export const Container = styled.section<Omit<Props, 'title' | 'foods'>>`
+export const Container = styled.section<Omit<Props, 'title' | 'menu'>>`
   padding: 32px 0;
   background-color: ${(props) =>
     props.background === 'black' ? Colors.black : Colors.gray};

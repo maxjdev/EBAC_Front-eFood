@@ -13,29 +13,33 @@ import exit from '../../assets/images/fechar.png'
 
 type Props = {
   title: string
-  category: number | string
+  portion: number | string
   description: string
   image: string
+  price: number
 }
 
-const Product = ({ category, description, image, title }: Props) => {
+const Product = ({ portion, description, image, title, price }: Props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-
   const toggleModal = () => setModalIsOpen(!modalIsOpen)
+
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 90) {
+      return descricao.slice(0, 90) + '...'
+    }
+    return descricao
+  }
 
   return (
     <>
       <Card>
         <img src={image} alt={title} />
-        {/*         <Infos>
-          {infos.map((info) => (
-            <Tag key={info}>{info}</Tag>
-          ))}
-        </Infos> */}
-        <TitleH3>{title}</TitleH3>
-        <Tag>{category}</Tag>
-        <Description>{description}</Description>
-        <ButtonBuy onClick={toggleModal}>Make a wish</ButtonBuy>
+        <div>
+          <TitleH3>{title}</TitleH3>
+          <Tag>{portion}</Tag>
+          <Description>{getDescricao(description)}</Description>
+          <ButtonBuy onClick={toggleModal}>Make a wish</ButtonBuy>
+        </div>
       </Card>
       <Modal onClick={toggleModal} className={modalIsOpen ? 'visible' : ''}>
         <div className="overlay"></div>
