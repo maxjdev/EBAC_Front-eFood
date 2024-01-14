@@ -2,40 +2,47 @@ import styled from 'styled-components'
 import { Colors } from '../../styles'
 
 export const Card = styled.div`
-  transition: transform 0.3s ease-in-out;
-  background-color: ${Colors.gray};
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   padding: 10px;
   border-radius: 8px;
-  margin-bottom: 20px;
-  display: block;
+  margin: 8px 6px;
+  transition: transform 0.5s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
-  img {
+  .card-image {
     width: 100%;
-    height: 200px;
+    max-height: 250px;
+    overflow: hidden;
     border-radius: 8px;
+    margin-bottom: 10px;
+    display: grid;
+    place-items: center;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
   }
 
-  div {
-    text-align: center;
-    /* display: block; */
-    /* flex-direction: column;
-    justify-content: space-around;
-    align-items: center; */
-  }
-`
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-export const TitleH3 = styled.h3`
-  font-weight: bold;
-  font-size: 16px;
-  display: block;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  text-align: center;
+    h4 {
+      margin-bottom: 8px;
+    }
+  }
 `
 
 export const Description = styled.p`
@@ -43,12 +50,6 @@ export const Description = styled.p`
   line-height: 22px;
   margin-top: 16px;
   text-align: center;
-`
-
-export const Infos = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
 `
 
 export const ButtonBuy = styled.button`
@@ -71,17 +72,17 @@ export const ButtonBuy = styled.button`
 `
 
 export const Modal = styled.div`
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.76);
-  display: none;
   align-items: center;
   justify-content: center;
-  z-index: 999;
 
+  display: none;
   &.visible {
     display: flex;
   }
@@ -95,7 +96,7 @@ export const Modal = styled.div`
 export const ModalContent = styled.div`
   background: ${Colors.gray};
   border-radius: 8px;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   padding: 20px;
   position: relative;
@@ -118,16 +119,25 @@ export const ModalContent = styled.div`
 
   .content {
     display: flex;
-    align-items: center;
+
+    > img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
   }
 
   img {
-    max-width: 150px;
+    width: 15px;
     border-radius: 8px;
     margin-right: 20px;
   }
 
   .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     margin-top: 10px;
 
