@@ -1,28 +1,48 @@
-import { Image, Title, Prices } from './styles'
-import BannerImg from '../../assets/images/banner1.jpg'
+import { Image, Title } from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
+import { useEffect, useState } from 'react'
 
-const Banner = () => (
-  <Image style={{ backgroundImage: `url(${BannerImg})` }}>
-    <div className="container">
-      <Tag size="big">Offer of the day</Tag>
-      <div>
-        <Title>Rustic Combo</Title>
-        <Prices>
-          From <span>R$ 35,00</span> <br />
-          for just R$ 29,90
-        </Prices>
+export type Restaurant = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+}
+
+const Banner = () => {
+  const [restaurant, setRestaurant] = useState<Restaurant>()
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setRestaurant(res[0]))
+  }, [])
+
+  const formatEvaluation = () => {
+    return 'Gastronomic evaluation is: ' + restaurant?.avaliacao
+  }
+
+  return (
+    <Image style={{ backgroundImage: `url(${restaurant?.capa})` }}>
+      <div className="container">
+        <Tag size="big">{formatEvaluation()}</Tag>
+        <div>
+          <Title>{restaurant?.titulo}</Title>
+        </div>
+        <Button
+          type="link"
+          to="/"
+          title="Click here to take advantage of the offer"
+        >
+          Reserve date
+        </Button>
       </div>
-      <Button
-        type="link"
-        to="/product"
-        title="Click here to take advantage of the offer"
-      >
-        Reserve mine
-      </Button>
-    </div>
-  </Image>
-)
+    </Image>
+  )
+}
 
 export default Banner

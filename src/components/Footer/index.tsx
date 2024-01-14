@@ -1,18 +1,17 @@
-import { Container, FooterSection, Link, Links, SectionTitle } from './styles'
-
-const currentYear = new Date().getFullYear()
+import { Container, FooterSection, Link, Links } from './styles'
 
 const Footer = () => (
   <Container>
     <div className="container">
       <FooterSection>
-        <SectionTitle>eBurguer</SectionTitle>
         <Links>
           <li>
             <Link>
               <img
-                src="https://img.icons8.com/external-lineal-color-zulfa-mahendra/48/external-burguer-food-delivery-lineal-color-zulfa-mahendra.png"
-                alt=""
+                width="30"
+                height="30"
+                src="https://img.icons8.com/ios-filled/50/FFFFFF/spaghetti.png"
+                alt="spaghetti"
               />
             </Link>
           </li>
@@ -47,9 +46,9 @@ const Footer = () => (
         </Links>
       </FooterSection>
       <p>
-        A efood é uma plataforma para divulgação de estabelecimentos, a
-        responsabilidade pela entrega, qualidade dos produtos é toda do
-        estabelecimento contratado.
+        Bella Tavola Italiana is a platform for promoting establishments,
+        <br /> a responsibility for delivery, <br />
+        product quality is all contracted establishment.
       </p>
     </div>
   </Container>

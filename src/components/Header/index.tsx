@@ -13,8 +13,10 @@ const Header = () => (
     </nav>
     <Link to="/">
       <img
-        src="https://img.icons8.com/external-lineal-color-zulfa-mahendra/48/external-burguer-food-delivery-lineal-color-zulfa-mahendra.png"
-        alt="eBurguer"
+        width="30"
+        height="30"
+        src="https://img.icons8.com/ios-filled/50/FFFFFF/spaghetti.png"
+        alt="spaghetti"
       />
     </Link>
     <LinkCart href="#">

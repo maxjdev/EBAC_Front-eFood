@@ -15,6 +15,7 @@ export const Container = styled.footer`
 
     p {
       text-align: center;
+      letter-spacing: 2px;
     }
   }
 `
