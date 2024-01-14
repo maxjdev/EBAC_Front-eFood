@@ -9,8 +9,6 @@ export type Props = {
 }
 
 const ProductsList = ({ background, title, menu }: Props) => {
-  console.log('consolelog1' + menu)
-
   return (
     <>
       <Container background={background}>
