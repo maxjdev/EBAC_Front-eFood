@@ -8,7 +8,7 @@ const Categories = () => {
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((data) => data.json())
-      .then((res) => setMenu(res[0].cardapio))
+      .then((data) => setMenu(data[0].cardapio))
   }, [])
 
   return (

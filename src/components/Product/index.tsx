@@ -1,19 +1,11 @@
 import Tag from '../Tag'
-import {
-  Description,
-  Card,
-  TitleH3,
-  Infos,
-  ButtonBuy,
-  Modal,
-  ModalContent
-} from './styles'
+import { Description, Card, ButtonBuy, Modal, ModalContent } from './styles'
 import { useState } from 'react'
 import exit from '../../assets/images/fechar.png'
 
 type Props = {
   title: string
-  portion: number | string
+  portion: string
   description: string
   image: string
   price: number
@@ -33,16 +25,20 @@ const Product = ({ portion, description, image, title, price }: Props) => {
   return (
     <>
       <Card>
-        <img src={image} alt={title} />
-        <div>
-          <TitleH3>{title}</TitleH3>
-          <Tag>{portion}</Tag>
+        <div className="card-image">
+          <img src={image} alt={title} />
+          <Tag>{'' + portion}</Tag>
+        </div>
+        <div className="card-content">
           <Description>{getDescricao(description)}</Description>
+        </div>
+        <div className="card-btn">
+          <h4>R$ {price}</h4>
           <ButtonBuy onClick={toggleModal}>Make a wish</ButtonBuy>
         </div>
       </Card>
-      <Modal onClick={toggleModal} className={modalIsOpen ? 'visible' : ''}>
-        <div className="overlay"></div>
+      <Modal className={modalIsOpen ? 'visible' : ''}>
+        <div className="overlay" onClick={toggleModal}></div>
         <div className="container">
           <ModalContent>
             <header>

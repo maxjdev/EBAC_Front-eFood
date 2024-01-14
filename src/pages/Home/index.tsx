@@ -11,30 +11,19 @@ export type Menu = {
   porcao: string
 }
 
-export type Restaurant = {
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: number
-  descricao: string
-  capa: string
-  cardapio: Menu[]
-}
-
 const Home = () => {
   const [menu, setMenu] = useState<Menu[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setMenu(res[0].cardapio))
+      .then((data) => data.json())
+      .then((data) => setMenu(data[0].cardapio))
   }, [])
 
   return (
     <>
       <Banner />
-      <ProductsList menu={menu} title={'Burgers'} background={'black'} />
+      <ProductsList menu={menu} title={'Menu'} background={'black'} />
     </>
   )
 }
