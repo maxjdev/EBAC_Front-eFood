@@ -17,6 +17,7 @@ const ProductsList = ({ background, title, menu }: Props) => {
           <List>
             {menu.map((food) => (
               <Product
+                menuItem={food}
                 price={food.preco}
                 key={food.id}
                 portion={food.porcao}
