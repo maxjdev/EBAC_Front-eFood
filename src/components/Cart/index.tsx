@@ -8,7 +8,6 @@ import {
   Prices,
   CartItem
 } from './styles'
-import Tag from '../Tag'
 import { RootReducer } from '../../store'
 import { close, remove } from '../../store/reducers/cart'
 import { TagContainer } from '../Tag/styles'
