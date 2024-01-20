@@ -9,6 +9,10 @@ export const Image = styled.div`
   background-size: cover;
   font-weight: bold;
 
+  @media (max-width: 768px) {
+    background-size: cover;
+  }
+
   .container {
     position: relative;
     padding-top: 340px;

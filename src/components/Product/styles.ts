@@ -120,6 +120,12 @@ export const ModalContent = styled.div`
   .content {
     display: flex;
 
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     > img {
       width: 300px;
       height: auto;
