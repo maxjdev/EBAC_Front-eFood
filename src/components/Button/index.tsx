@@ -1,7 +1,7 @@
-import { ButtonContainer, ButtonLink } from './styles'
+import { ButtonBuy, ButtonContainer, ButtonLink } from './styles'
 
 type Props = {
-  type: 'button' | 'link'
+  type: 'button' | 'link' | 'submit'
   title: string
   to?: string
   onClick?: () => void
@@ -14,6 +14,12 @@ const Button = ({ type, title, to, onClick, children }: Props) => {
       <ButtonContainer type="button" title={title} onClick={onClick}>
         {children}
       </ButtonContainer>
+    )
+  } else if (type === 'submit') {
+    return (
+      <ButtonBuy type="button" title={title} onClick={onClick}>
+        {children}
+      </ButtonBuy>
     )
   }
 
