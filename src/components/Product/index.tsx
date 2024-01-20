@@ -56,7 +56,7 @@ const Product = ({
         </div>
         <div className="card-btn">
           <h4>{formatPrice(price)}</h4>
-          <ButtonBuy onClick={openModal}>Make a wish</ButtonBuy>
+          <ButtonBuy onClick={openModal}>Pedir</ButtonBuy>
         </div>
       </Card>
       <Modal className={modalIsOpen ? 'visible' : ''}>
@@ -72,7 +72,7 @@ const Product = ({
               <div className="description">
                 <p>{description}</p>
                 <div>
-                  <button onClick={buyBtnModal}>Buy</button>
+                  <button onClick={buyBtnModal}>Pedir prato</button>
                 </div>
               </div>
             </div>

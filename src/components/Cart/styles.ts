@@ -120,3 +120,49 @@ export const CartItem = styled.li`
     cursor: pointer;
   }
 `
+
+export const CheckoutCart = styled.div`
+  display: block;
+
+  h3 {
+    margin-bottom: 14px;
+  }
+`
+
+export const FormDelivery = styled.form`
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  font-weight: bold;
+
+  Button {
+    margin-top: 22px;
+  }
+
+  label,
+  .cep-numb {
+    margin-top: 16px;
+  }
+
+  input,
+  label {
+    height: 32px;
+    border-radius: 2px;
+    border: none;
+  }
+
+  .cep-numb {
+    display: flex;
+
+    & div {
+      margin-right: 18px;
+      width: calc(100% - 10%);
+
+      input,
+      label {
+        max-width: 155px;
+      }
+    }
+  }
+`

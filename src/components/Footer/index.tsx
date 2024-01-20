@@ -46,9 +46,11 @@ const Footer = () => (
         </Links>
       </FooterSection>
       <p>
-        Bella Tavola Italiana is a platform for promoting establishments,
-        <br /> a responsibility for delivery, <br />
-        product quality is all contracted establishment.
+        Bella Tavola Italiana encanta com sua autenticidade italiana, oferecendo
+        pratos clássicos preparados com ingredientes frescos. O ambiente
+        acolhedor e a carta de vinhos selecionada proporcionam uma experiência
+        gastronômica única, celebrando a tradição culinária italiana. Uma
+        verdadeira jornada de sabores em cada visita.
       </p>
     </div>
   </Container>
