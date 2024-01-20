@@ -60,8 +60,25 @@ const Cart = () => {
     if (paymentStep && validatePaymentData()) {
       submitForm()
       closeCart()
+      clearForm()
       dispatch(clear())
     }
+  }
+
+  const clearForm = () => {
+    setFormData({
+      nameDisplayCard: '',
+      numberDisplayCard: '',
+      codeDisplayCard: '',
+      expiresMonthCard: '',
+      expiresYearCard: '',
+      fullName: '',
+      address: '',
+      city: '',
+      cep: '',
+      number: '',
+      complement: ''
+    })
   }
 
   const validateDeliveryData = () => {
