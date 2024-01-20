@@ -5,7 +5,8 @@ const Proof = () => {
   return (
     <Card>
       <Content>
-        <h2>Pedido realizado - #ID</h2>
+        <h2>Pedido realizado</h2>
+
         <p>
           Estamos felizes em informar que seu pedido já está em processo de
           preparação e, em breve, será entregue no endereço fornecido.

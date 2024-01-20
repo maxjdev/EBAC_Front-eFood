@@ -23,7 +23,7 @@ const Banner = () => {
   }, [])
 
   const formatEvaluation = () => {
-    return 'Gastronomic evaluation is: ' + restaurant?.avaliacao
+    return 'Avaliação gastronômia: ' + restaurant?.avaliacao
   }
 
   return (
@@ -33,12 +33,8 @@ const Banner = () => {
         <div>
           <Title>{restaurant?.titulo}</Title>
         </div>
-        <Button
-          type="link"
-          to="/"
-          title="Click here to take advantage of the offer"
-        >
-          Reserve date
+        <Button type="link" to="/" title="Reservas">
+          Reservas
         </Button>
       </div>
     </Image>

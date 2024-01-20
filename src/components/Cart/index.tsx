@@ -383,17 +383,14 @@ const Cart = () => {
                 </CartItem>
               ))}
             </ul>
-            <Quantity>{items.length} Jogo(s) no carrinho</Quantity>
-            <Prices>
-              Total de {formatPrice(getTotalPrice())}{' '}
-              <span>Em até 6x s/ juros </span>
-            </Prices>
+            <Quantity>{items.length} Prato(s) no carrinho</Quantity>
+            <Prices>Total de {formatPrice(getTotalPrice())} </Prices>
             <Button
               onClick={isEmptyCart}
               title="clique aqui para continuar com a compra"
               type="button"
             >
-              Continuar com a compra
+              Continuar com o pedido
             </Button>
           </>
         )}

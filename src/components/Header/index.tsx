@@ -31,7 +31,7 @@ const Header = () => {
         />
       </Link>
       <LinkCart onClick={openCart} href="#">
-        {items.length} - Product(s)
+        {items.length} - Prato(s)
         <img src={cart} alt="Cart" />
       </LinkCart>
     </HeaderBar>
